@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "navbar navbar"
+      "productlist productlist";
+    gap: 40px;
+    height: 100vh;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+  }
+   
+  .productlist {
+    grid-area: productlist;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 70%;
+    margin: auto;
+  }
+  
