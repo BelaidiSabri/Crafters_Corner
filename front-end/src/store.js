@@ -4,6 +4,7 @@ import profileReducer from "./slice/profileSlice";
 import loginReducer from "./slice/loginSlice";
 import thunk from "redux-thunk";
 import productSlice from "./slice/productSlice";
+import ArtisanProductsSlice from "./slice/artisanProductSlice"
 
 export default configureStore({
   reducer: {
@@ -11,7 +12,7 @@ export default configureStore({
     profile: profileReducer,
     login: loginReducer,
     products :productSlice,
+    ArtisanProducts : ArtisanProductsSlice
   },
   middleware: [thunk],
 });
-

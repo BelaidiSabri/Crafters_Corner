@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 import Product from '../products/Product';
-import { getAllProducts } from '../../slice/productSlice';
-import './ProductList.css'
+import './ProductList.css';
 
-const ProductList = () => {
-  const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.products);
-  console.log(products);
-  const loading = useSelector((state) => state.products.loading);
-  
-  useEffect(() => {
-    dispatch(getAllProducts());
-  }, [dispatch]);
-
+const ProductList = ({ productsData, loading }) => {
   return (
     <div className="productlist">
-      {loading? <p>loading</p>: products.map((product)=><Product product={product}></Product>)}
+      {loading ? <p>Loading</p> : productsData.map((product) => <Product product={product} key={product.id} />)}
     </div>
   );
 };
 
 export default ProductList;
+

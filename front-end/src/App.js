@@ -5,11 +5,13 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/Profile';
 import Home from './pages/home/Home';
+import Navbar from './components/Navbar/Navbar';
 
 
 function App() {
   return (
     <div className="App">
+      <Navbar></Navbar>
       <Routes>
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/signup' element={<Signup></Signup>}></Route>

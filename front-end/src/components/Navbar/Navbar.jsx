@@ -11,9 +11,9 @@ const Navbar = () => {
         <img src={logo} alt="Logo" />
       </div>
       <ul className="navbar-menu">
-        <li className="navbar-item">Home</li>
-        <li className="navbar-item">Products</li>
-        <li className="navbar-item">Eco-friendly</li>
+       <Link to={'/'} className="navbar-item"><li>Home</li></Link>
+       <Link className="navbar-item"><li>Products</li></Link>
+       <Link className="navbar-item"><li>Eco-friendly</li></Link>
       </ul>
       <div className="navbar-connect">
         <Link to={'/login'}>Connect</Link>
